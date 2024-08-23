@@ -1,0 +1,14 @@
+# postgresql
+version: "3.8"
+
+services:
+  pgsql:
+    image: postgres:16.1
+    container_name: postgresql
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PW}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5432:5432"

@@ -1,4 +1,7 @@
 #### Backend
+# certs for connecting to the database
+backend/certs
+backend/.env
 # compiled output
 backend/dist
 backend/node_modules
@@ -61,8 +64,7 @@ frontend/npm-debug.log*
 frontend/yarn-debug.log*
 frontend/yarn-error.log*
 
-# local env files
-frontend/.env*.local
+frontend/.env
 
 # vercel
 frontend/.vercel

@@ -1,2 +1,16 @@
 runtime: nodejs20
 service: my-nest-app
+
+env_variables:
+  DB_USER: ${DB_USER}
+  DB_PASS: ${DB_PW}
+  DB_NAME: ${DB_NAME}
+  DB_PORT: 5432
+  INSTANCE_HOST: ${DB_HOST}
+  DB_ROOT_CERT: certs/server-ca.pem
+  DB_CERT: certs/client-cert.pem
+  DB_KEY: certs/client-key.pem
+  PRIVATE_IP: TRUE
+
+vpc_access_connector:
+  name: projects/${PROJECT_ID}/locations/asia-northeast3/connectors/${CONNECTOR_NAME}
